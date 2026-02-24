@@ -9,6 +9,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
   font-family:'Poppins',sans-serif;
   background:linear-gradient(135deg,#ff6b6b,#ff8e53);
@@ -18,10 +19,9 @@ body{
   padding:40px 20px;
   color:white;
 }
-.wrapper{
-  width:100%;
-  max-width:1100px;
-}
+
+.wrapper{width:100%;max-width:1100px;}
+
 .card{
   background:rgba(255,255,255,0.12);
   backdrop-filter:blur(25px);
@@ -29,66 +29,108 @@ body{
   padding:60px 50px;
   box-shadow:0 40px 100px rgba(0,0,0,0.25);
 }
+
 .nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
   margin-bottom:60px;
 }
+
 .logo{
   font-weight:700;
   font-size:24px;
 }
-.nav-links{
+
+.nav-right{
   display:flex;
-  gap:25px;
+  gap:20px;
+  align-items:center;
 }
-.nav-links a{
+
+.nav-right a{
   text-decoration:none;
   color:white;
-  opacity:0.8;
-  font-weight:500;
+  opacity:0.85;
   transition:0.3s;
 }
-.nav-links a:hover{opacity:1;}
+
+.nav-right a:hover{opacity:1;}
+
+.lang-switch{
+  background:white;
+  color:#ff4e50;
+  border-radius:20px;
+  padding:6px 14px;
+  font-size:13px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.lang-switch:hover{
+  transform:scale(1.05);
+}
+
+/* HERO */
+
 .hero{
   text-align:center;
   margin-bottom:70px;
 }
+
 .hero h1{
-  font-size:42px;
+  font-size:44px;
   margin-bottom:15px;
 }
+
 .hero p{
-  opacity:0.85;
+  opacity:0.95;
+  font-size:16px;
+  margin-bottom:20px;
 }
+
+.tagline{
+  font-weight:600;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* GRID */
+
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
+
 .feature{
   background:rgba(255,255,255,0.15);
   border-radius:20px;
   padding:30px;
   transition:0.3s;
 }
+
 .feature:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   background:rgba(255,255,255,0.25);
 }
+
 .feature h3{
   margin-bottom:12px;
+  font-size:18px;
 }
+
 .feature p{
   font-size:14px;
-  opacity:0.9;
-  line-height:1.6;
+  line-height:1.7;
+  opacity:0.95;
 }
+
 .button{
   display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
+  margin-top:18px;
+  padding:10px 22px;
   border-radius:50px;
   background:white;
   color:#ff4e50;
@@ -96,84 +138,145 @@ body{
   font-weight:600;
   transition:0.3s;
 }
+
 .button:hover{
   transform:scale(1.05);
 }
+
+/* FOOTER */
+
 .footer{
-  margin-top:70px;
+  margin-top:80px;
   text-align:center;
   font-size:13px;
-  opacity:0.6;
+  opacity:0.7;
 }
+
 @media(max-width:768px){
   .card{padding:40px 25px;}
-  .hero h1{font-size:30px;}
+  .hero h1{font-size:32px;}
 }
 </style>
 </head>
 
 <body>
-
 <div class="wrapper">
-  <div class="card">
+<div class="card">
 
-    <div class="nav">
-      <div class="logo">🎮 GuessDuel</div>
-      <div class="nav-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </div>
-    </div>
-
-    <div class="hero">
-      <h1>GuessDuel Support Center</h1>
-      <p>Everything you need to know about gameplay, subscriptions and support.</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="feature">
-        <h3>🎮 How the Game Works</h3>
-        <p>
-          GuessDuel is a fast-paced guessing game where players compete using
-          credits. Each round challenges your knowledge and reaction speed.
-        </p>
-      </div>
-
-      <div class="feature">
-        <h3>💎 Subscriptions & Credits</h3>
-        <p>
-          Credits are used to enter matches. Premium subscription unlocks
-          bonus credits and exclusive features.
-        </p>
-      </div>
-
-      <div class="feature">
-        <h3>🧠 Gameplay Help</h3>
-        <p>
-          Experiencing bugs or unexpected behavior? Make sure your app is
-          updated to the latest version.
-        </p>
-      </div>
-
-      <div class="feature">
-        <h3>📩 Contact Support</h3>
-        <p>
-          For billing issues, account questions or feedback, reach our team directly.
-        </p>
-        <a href="mailto:support@guessduel.com?subject=Support Request" class="button">
-          Email Support
-        </a>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      © 2026 GuessDuel. All rights reserved.
-    </div>
-
+<div class="nav">
+  <div class="logo">🎮 GuessDuel</div>
+  <div class="nav-right">
+    <a href="privacy.html" data-i18n="privacy">Privacy</a>
+    <a href="terms.html" data-i18n="terms">Terms</a>
+    <div class="lang-switch" onclick="toggleLang()">TR</div>
   </div>
 </div>
+
+<div class="hero">
+  <h1 data-i18n="hero_title">Real-Time 1v1 Strategy Duels</h1>
+  <p data-i18n="hero_desc">
+    Choose a secret character. Ask smart yes-or-no questions. 
+    Eliminate rivals. Outsmart your opponent before they outsmart you.
+  </p>
+  <div class="tagline" data-i18n="tagline">
+    Simple rules. Deep strategy. Intense competition.
+  </div>
+</div>
+
+<div class="grid">
+
+  <div class="feature">
+    <h3 data-i18n="game_title">🎮 How It Works</h3>
+    <p data-i18n="game_text">
+      Online real-time PvP guessing battles. Both players select a hidden character 
+      from a 24-card board and strategically narrow down possibilities to win the duel.
+    </p>
+  </div>
+
+  <div class="feature">
+    <h3 data-i18n="feature_title">⚔ Game Features</h3>
+    <p data-i18n="feature_text">
+      • Real-time 1v1 multiplayer<br>
+      • 24 unique characters per match<br>
+      • Daily free games<br>
+      • Premium mode with larger boards<br>
+      • Smooth mobile experience
+    </p>
+  </div>
+
+  <div class="feature">
+    <h3 data-i18n="support_title">📩 Support</h3>
+    <p data-i18n="support_text">
+      Billing issue, bug report or feedback? Our team is ready to help you.
+    </p>
+    <a href="mailto:support@guessduel.com" class="button" data-i18n="support_btn">
+      Contact Support
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 GuessDuel
+</div>
+
+</div>
+</div>
+
+<script>
+let currentLang = localStorage.getItem("lang");
+
+// Auto detect on first visit
+if(!currentLang){
+  currentLang = navigator.language.startsWith("tr") ? "tr" : "en";
+}
+
+const translations = {
+  en: {
+    privacy:"Privacy",
+    terms:"Terms",
+    hero_title:"Real-Time 1v1 Strategy Duels",
+    hero_desc:"Choose a secret character. Ask smart yes-or-no questions. Eliminate rivals. Outsmart your opponent before they outsmart you.",
+    tagline:"Simple rules. Deep strategy. Intense competition.",
+    game_title:"🎮 How It Works",
+    game_text:"Online real-time PvP guessing battles. Both players select a hidden character from a 24-card board and strategically narrow down possibilities to win the duel.",
+    feature_title:"⚔ Game Features",
+    feature_text:"• Real-time 1v1 multiplayer\n• 24 unique characters per match\n• Daily free games\n• Premium mode with larger boards\n• Smooth mobile experience",
+    support_title:"📩 Support",
+    support_text:"Billing issue, bug report or feedback? Our team is ready to help you.",
+    support_btn:"Contact Support"
+  },
+  tr: {
+    privacy:"Gizlilik",
+    terms:"Kullanım Şartları",
+    hero_title:"Gerçek Zamanlı 1v1 Strateji Düelloları",
+    hero_desc:"Gizli karakterini seç. Akıllı evet-hayır soruları sor. Rakibini ele. Seni tahmin etmeden önce düelloyu kazan.",
+    tagline:"Basit kurallar. Derin strateji. Yoğun rekabet.",
+    game_title:"🎮 Nasıl Oynanır",
+    game_text:"Gerçek zamanlı PvP tahmin düelloları. İki oyuncu aynı 24 karakterlik tahtadan gizli bir karakter seçer ve stratejik sorularla rakibini ele.",
+    feature_title:"⚔ Oyun Özellikleri",
+    feature_text:"• Gerçek zamanlı 1v1 çok oyunculu\n• Maç başına 24 karakter\n• Günlük ücretsiz oyunlar\n• Daha büyük tahtalarla Premium mod\n• Akıcı mobil deneyim",
+    support_title:"📩 Destek",
+    support_text:"Fatura sorunu, hata bildirimi veya geri bildirim için ekibimizle iletişime geçin.",
+    support_btn:"Destek Al"
+  }
+};
+
+function applyTranslations(){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    el.innerHTML = translations[currentLang][el.dataset.i18n].replace(/\n/g,"<br>");
+  });
+  document.querySelector(".lang-switch").innerText = currentLang === "en" ? "TR" : "EN";
+  localStorage.setItem("lang", currentLang);
+}
+
+function toggleLang(){
+  currentLang = currentLang === "en" ? "tr" : "en";
+  applyTranslations();
+}
+
+applyTranslations();
+</script>
 
 </body>
 </html>
