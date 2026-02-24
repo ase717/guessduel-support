@@ -5,91 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GuessDuel Support</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #ff6b6b, #ff8e53);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
 }
 
 .container {
-  background: #ffffff;
-  color: #222;
-  max-width: 700px;
-  width: 90%;
-  border-radius: 30px;
-  padding: 50px 40px;
-  box-shadow: 0 25px 80px rgba(0,0,0,0.25);
-  text-align: center;
-  animation: fadeIn 1s ease;
+  background:#ffffff;
+  max-width:800px;
+  width:100%;
+  border-radius:30px;
+  padding:50px 40px;
+  box-shadow:0 25px 80px rgba(0,0,0,0.25);
+  text-align:center;
+  animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.nav {
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-bottom:35px;
+  font-weight:600;
+}
+
+.nav a {
+  text-decoration:none;
+  color:#ff4e50;
+  transition:0.3s;
+}
+
+.nav a:hover {
+  opacity:0.6;
 }
 
 h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  color: #ff4e50;
+  font-size:36px;
+  color:#ff4e50;
+  margin-bottom:10px;
 }
 
 .subtitle {
-  margin-bottom: 35px;
-  font-size: 16px;
-  opacity: 0.7;
+  opacity:0.7;
+  margin-bottom:40px;
 }
 
 .section {
-  margin-top: 35px;
+  margin-top:30px;
 }
 
 .section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #ff4e50;
+  font-size:20px;
+  color:#ff4e50;
+  margin-bottom:10px;
 }
 
 .section p {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size:14px;
+  line-height:1.6;
 }
 
 .button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #ff6b6b, #ff4e50);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#ff6b6b,#ff4e50);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.links {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .footer {
-  margin-top: 50px;
-  font-size: 13px;
-  opacity: 0.5;
+  margin-top:40px;
+  font-size:12px;
+  opacity:0.6;
 }
 </style>
 </head>
@@ -97,31 +116,35 @@ h1 {
 <body>
 
 <div class="container">
-  <h1>🎮 GuessDuel Support</h1>
-  <div class="subtitle">
-    Need help? We're here for you.
-  </div>
 
-  <div class="section">
-    <h2>📩 Contact Us</h2>
-    <p>If you have questions, bug reports, or account issues:</p>
-    <a href="mailto:support@thebabil.com" class="button">E-mail Support</a>
-  </div>
+<div class="nav">
+  <a href="index.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+</div>
 
-  <div class="section">
-    <h2>💎 Premium & Subscriptions</h2>
-    <p>All subscriptions are handled by Apple.  
-    You can manage or cancel anytime in your Apple ID settings.</p>
-  </div>
+<h1>🎮 GuessDuel</h1>
+<div class="subtitle">
+Official Support Center
+</div>
 
-  <div class="section">
-    <h2>🔒 Privacy</h2>
-    <p>Your privacy matters. Please review the Privacy Policy inside the app.</p>
-  </div>
+<div class="section">
+  <h2>📩 Need Help?</h2>
+  <p>If you experience issues, subscription problems, or have feedback:</p>
+  <a href="mailto:support@guessduel.com?subject=GuessDuel Support Request" class="button">
+    Contact Support
+  </a>
+</div>
 
-  <div class="footer">
-    © 2026 GuessDuel. All rights reserved.
-  </div>
+<div class="links">
+  <a href="privacy.html" class="button">Privacy Policy</a>
+  <a href="terms.html" class="button">Terms of Use</a>
+</div>
+
+<div class="footer">
+© 2026 GuessDuel. All rights reserved.
+</div>
+
 </div>
 
 </body>
