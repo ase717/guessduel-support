@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuessDuel - Privacy Policy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  display:flex;
+  justify-content:center;
+  padding:60px 20px;
+}
+
+.container {
+  background:#ffffff;
+  max-width:800px;
+  width:100%;
+  border-radius:30px;
+  padding:50px 40px;
+  box-shadow:0 25px 80px rgba(0,0,0,0.25);
+}
+
+h1 {
+  color:#ff4e50;
+  margin-bottom:10px;
+}
+
+h2 {
+  margin-top:30px;
+  color:#ff4e50;
+  font-size:18px;
+}
+
+p, li {
+  font-size:14px;
+  line-height:1.7;
+  margin-top:10px;
+}
+
+ul { margin-left:20px; }
+
+.button {
+  display:inline-block;
+  margin-top:40px;
+  padding:10px 20px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#ff6b6b,#ff4e50);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.footer {
+  margin-top:40px;
+  font-size:12px;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Privacy Policy</h1>
+<p><strong>Last updated:</strong> 7 February 2026</p>
+
+<p>This Privacy Policy explains how GuessDuel handles information within the mobile application.</p>
+
+<h2>1. Information We Collect</h2>
+<p>GuessDuel does not require account creation or login.</p>
+<p>The application stores limited, non-personal data necessary for gameplay and subscription features:</p>
+
+<ul>
+<li>Anonymous unique identifiers (UUID)</li>
+<li>Game credits</li>
+<li>Subscription status (weekly or monthly)</li>
+<li>Subscription expiration date</li>
+<li>Credit reset timestamps</li>
+</ul>
+
+<p>This data is securely stored using Supabase and is not linked to personal information such as name, email address, or phone number.</p>
+
+<h2>2. How We Use Information</h2>
+<ul>
+<li>Manage in-app credits</li>
+<li>Determine premium access</li>
+<li>Restore purchases</li>
+<li>Ensure proper subscription functionality</li>
+<li>Maintain app performance</li>
+</ul>
+
+<p>We do not use data for advertising or cross-app tracking.</p>
+
+<h2>3. In-App Purchases</h2>
+<p>Subscriptions and payments are processed through Apple App Store. We do not collect or store payment information.</p>
+
+<h2>4. Data Sharing</h2>
+<p>We do not sell or rent user data. Data may be processed by service providers strictly for operational purposes (e.g., Supabase, Apple).</p>
+
+<h2>5. Children’s Privacy</h2>
+<p>GuessDuel is suitable for users of all ages. We do not knowingly collect personal information from children.</p>
+
+<h2>6. Changes to This Policy</h2>
+<p>This Privacy Policy may be updated periodically. Updates will be posted on this page.</p>
+
+<h2>7. Contact</h2>
+<p>For privacy-related questions, contact:</p>
+<p><strong>support@guessduel.com</strong></p>
+
+<a href="index.html" class="button">← Back to Support</a>
+
+<div class="footer">
+© 2026 GuessDuel. All rights reserved.
+</div>
+
+</div>
+</body>
+</html>
