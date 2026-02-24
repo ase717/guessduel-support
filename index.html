@@ -1,39 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GuessDuel Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 20px;
-      line-height: 1.6;
-      background: #ffffff;
-      color: #111;
-    }
-    h1 { font-size: 28px; }
-    a { color: #007AFF; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuessDuel Support</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1e);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    margin-top: 30px;
+    font-size: 18px;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  a {
+    color: #8e8eff;
+    text-decoration: none;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.5;
+  }
+</style>
 </head>
+
 <body>
+
+<div class="card">
   <h1>GuessDuel Support</h1>
 
-  <p>Thank you for using GuessDuel.</p>
+  <p>Welcome to the official support page for GuessDuel.</p>
 
   <h2>Contact</h2>
-  <p>For support inquiries, please email:</p>
-  <p><strong>support@guessduel.com</strong></p>
+  <p>If you need assistance, please contact us at:</p>
+  <p class="email">support@guessduel.com</p>
 
   <h2>Subscriptions</h2>
-  <p>Premium subscriptions are managed through Apple App Store. 
-  You can cancel anytime via your Apple ID subscription settings.</p>
+  <p>Premium subscriptions are managed through your Apple ID.  
+  You can cancel anytime in your App Store subscription settings.</p>
 
-  <h2>Privacy Policy</h2>
-  <p>Please refer to the Privacy Policy available within the app.</p>
+  <h2>Privacy</h2>
+  <p>Your privacy is important to us. Please refer to the Privacy Policy available within the app.</p>
 
-  <p>© 2026 GuessDuel. All rights reserved.</p>
+  <div class="footer">
+    © 2026 GuessDuel. All rights reserved.
+  </div>
+</div>
+
 </body>
 </html>
