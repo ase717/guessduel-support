@@ -16,7 +16,7 @@ body{
   min-height:100vh;
   display:flex;
   justify-content:center;
-  padding:40px 20px;
+  padding:20px;
   color:white;
 }
 
@@ -24,38 +24,41 @@ body{
 
 .card{
   background:rgba(255,255,255,0.12);
-  backdrop-filter:blur(25px);
-  border-radius:30px;
-  padding:60px 50px;
-  box-shadow:0 40px 100px rgba(0,0,0,0.25);
+  backdrop-filter:blur(20px);
+  border-radius:28px;
+  padding:40px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
+
+/* NAV */
 
 .nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:60px;
+  margin-bottom:50px;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
 .logo{
   font-weight:700;
-  font-size:24px;
+  font-size:22px;
 }
 
 .nav-right{
   display:flex;
-  gap:20px;
+  gap:18px;
   align-items:center;
+  flex-wrap:wrap;
 }
 
 .nav-right a{
   text-decoration:none;
   color:white;
-  opacity:0.85;
-  transition:0.3s;
+  opacity:0.9;
+  font-size:14px;
 }
-
-.nav-right a:hover{opacity:1;}
 
 .lang-switch{
   background:white;
@@ -65,29 +68,26 @@ body{
   font-size:13px;
   cursor:pointer;
   font-weight:600;
-  transition:0.3s;
-}
-
-.lang-switch:hover{
-  transform:scale(1.05);
 }
 
 /* HERO */
 
 .hero{
   text-align:center;
-  margin-bottom:70px;
+  margin-bottom:60px;
 }
 
 .hero h1{
-  font-size:44px;
+  font-size:36px;
   margin-bottom:15px;
+  line-height:1.2;
 }
 
 .hero p{
+  font-size:15px;
   opacity:0.95;
-  font-size:16px;
-  margin-bottom:20px;
+  max-width:650px;
+  margin:0 auto 15px auto;
 }
 
 .tagline{
@@ -100,61 +100,61 @@ body{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
 }
 
 .feature{
-  background:rgba(255,255,255,0.15);
-  border-radius:20px;
-  padding:30px;
+  background:rgba(255,255,255,0.18);
+  border-radius:18px;
+  padding:25px;
   transition:0.3s;
 }
 
-.feature:hover{
-  transform:translateY(-6px);
-  background:rgba(255,255,255,0.25);
-}
-
 .feature h3{
-  margin-bottom:12px;
-  font-size:18px;
+  margin-bottom:10px;
+  font-size:17px;
 }
 
 .feature p{
   font-size:14px;
-  line-height:1.7;
-  opacity:0.95;
+  line-height:1.6;
 }
 
 .button{
   display:inline-block;
-  margin-top:18px;
-  padding:10px 22px;
-  border-radius:50px;
+  margin-top:15px;
+  padding:10px 20px;
+  border-radius:40px;
   background:white;
   color:#ff4e50;
   text-decoration:none;
   font-weight:600;
-  transition:0.3s;
-}
-
-.button:hover{
-  transform:scale(1.05);
+  font-size:14px;
 }
 
 /* FOOTER */
 
 .footer{
-  margin-top:80px;
+  margin-top:60px;
   text-align:center;
-  font-size:13px;
-  opacity:0.7;
+  font-size:12px;
+  opacity:0.8;
+  line-height:1.6;
 }
 
+.footer a{
+  color:white;
+  text-decoration:underline;
+}
+
+/* MOBILE */
+
 @media(max-width:768px){
-  .card{padding:40px 25px;}
-  .hero h1{font-size:32px;}
+  .card{padding:25px;}
+  .hero h1{font-size:26px;}
+  .hero p{font-size:14px;}
+  .nav{flex-direction:column;align-items:flex-start;}
 }
 </style>
 </head>
@@ -166,19 +166,21 @@ body{
 <div class="nav">
   <div class="logo">🎮 GuessDuel</div>
   <div class="nav-right">
-    <a href="privacy.html" data-i18n="privacy">Privacy</a>
-    <a href="terms.html" data-i18n="terms">Terms</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
+      Terms of Use
+    </a>
     <div class="lang-switch" onclick="toggleLang()">TR</div>
   </div>
 </div>
 
 <div class="hero">
-  <h1 data-i18n="hero_title">Real-Time 1v1 Strategy Duels</h1>
-  <p data-i18n="hero_desc">
-    Choose a secret character. Ask smart yes-or-no questions. 
+  <h1>Real-Time 1v1 Strategy Duels</h1>
+  <p>
+    Choose a secret character. Ask smart yes-or-no questions.
     Eliminate rivals. Outsmart your opponent before they outsmart you.
   </p>
-  <div class="tagline" data-i18n="tagline">
+  <div class="tagline">
     Simple rules. Deep strategy. Intense competition.
   </div>
 </div>
@@ -186,16 +188,17 @@ body{
 <div class="grid">
 
   <div class="feature">
-    <h3 data-i18n="game_title">🎮 How It Works</h3>
-    <p data-i18n="game_text">
-      Online real-time PvP guessing battles. Both players select a hidden character 
-      from a 24-card board and strategically narrow down possibilities to win the duel.
+    <h3>🎮 How It Works</h3>
+    <p>
+      Online real-time PvP guessing battles.
+      Both players select a hidden character from a 24-card board
+      and strategically narrow down possibilities to win the duel.
     </p>
   </div>
 
   <div class="feature">
-    <h3 data-i18n="feature_title">⚔ Game Features</h3>
-    <p data-i18n="feature_text">
+    <h3>⚔ Game Features</h3>
+    <p>
       • Real-time 1v1 multiplayer<br>
       • 24 unique characters per match<br>
       • Daily free games<br>
@@ -205,11 +208,12 @@ body{
   </div>
 
   <div class="feature">
-    <h3 data-i18n="support_title">📩 Support</h3>
-    <p data-i18n="support_text">
-      Billing issue, bug report or feedback? Our team is ready to help you.
+    <h3>📩 Support</h3>
+    <p>
+      Billing issue, bug report or feedback?
+      Our team is ready to help you.
     </p>
-    <a href="mailto:support@guessduel.com" class="button" data-i18n="support_btn">
+    <a href="mailto:support@guessduel.com" class="button">
       Contact Support
     </a>
   </div>
@@ -217,7 +221,12 @@ body{
 </div>
 
 <div class="footer">
-  © 2026 GuessDuel
+  © 2026 GuessDuel <br><br>
+  Privacy Policy: <a href="privacy.html">View</a> |
+  Terms of Use (EULA):
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
+    Apple Standard License Agreement
+  </a>
 </div>
 
 </div>
@@ -225,57 +234,14 @@ body{
 
 <script>
 let currentLang = localStorage.getItem("lang");
-
-// Auto detect on first visit
 if(!currentLang){
   currentLang = navigator.language.startsWith("tr") ? "tr" : "en";
 }
-
-const translations = {
-  en: {
-    privacy:"Privacy",
-    terms:"Terms",
-    hero_title:"Real-Time 1v1 Strategy Duels",
-    hero_desc:"Choose a secret character. Ask smart yes-or-no questions. Eliminate rivals. Outsmart your opponent before they outsmart you.",
-    tagline:"Simple rules. Deep strategy. Intense competition.",
-    game_title:"🎮 How It Works",
-    game_text:"Online real-time PvP guessing battles. Both players select a hidden character from a 24-card board and strategically narrow down possibilities to win the duel.",
-    feature_title:"⚔ Game Features",
-    feature_text:"• Real-time 1v1 multiplayer\n• 24 unique characters per match\n• Daily free games\n• Premium mode with larger boards\n• Smooth mobile experience",
-    support_title:"📩 Support",
-    support_text:"Billing issue, bug report or feedback? Our team is ready to help you.",
-    support_btn:"Contact Support"
-  },
-  tr: {
-    privacy:"Gizlilik",
-    terms:"Kullanım Şartları",
-    hero_title:"Gerçek Zamanlı 1v1 Strateji Düelloları",
-    hero_desc:"Gizli karakterini seç. Akıllı evet-hayır soruları sor. Rakibini ele. Seni tahmin etmeden önce düelloyu kazan.",
-    tagline:"Basit kurallar. Derin strateji. Yoğun rekabet.",
-    game_title:"🎮 Nasıl Oynanır",
-    game_text:"Gerçek zamanlı PvP tahmin düelloları. İki oyuncu aynı 24 karakterlik tahtadan gizli bir karakter seçer ve stratejik sorularla rakibini ele.",
-    feature_title:"⚔ Oyun Özellikleri",
-    feature_text:"• Gerçek zamanlı 1v1 çok oyunculu\n• Maç başına 24 karakter\n• Günlük ücretsiz oyunlar\n• Daha büyük tahtalarla Premium mod\n• Akıcı mobil deneyim",
-    support_title:"📩 Destek",
-    support_text:"Fatura sorunu, hata bildirimi veya geri bildirim için ekibimizle iletişime geçin.",
-    support_btn:"Destek Al"
-  }
-};
-
-function applyTranslations(){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.innerHTML = translations[currentLang][el.dataset.i18n].replace(/\n/g,"<br>");
-  });
-  document.querySelector(".lang-switch").innerText = currentLang === "en" ? "TR" : "EN";
-  localStorage.setItem("lang", currentLang);
-}
-
 function toggleLang(){
   currentLang = currentLang === "en" ? "tr" : "en";
-  applyTranslations();
+  localStorage.setItem("lang", currentLang);
+  location.reload();
 }
-
-applyTranslations();
 </script>
 
 </body>
